@@ -2,5 +2,9 @@
 name = "cargo-release-pr-test-two"
 version = "2.2.2"
 edition = "2021"
+description = "Second"
+license = "MIT"
+repository = "https://github.com/mmagician/cargo-release-pr-test"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
