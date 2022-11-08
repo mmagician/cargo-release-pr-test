@@ -1,0 +1,8 @@
+release:
+	# Run with `make release VERSION=<version>`
+	git pull
+	cargo update
+	git tag $(VERSION) 
+	# push the tag
+	git push $(VERSION)
+	cargo release publish --no-push --no-tag --execute --verbose --allow-branch "main"
