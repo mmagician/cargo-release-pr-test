@@ -9,7 +9,3 @@ version = "2.1.1"
 [[package]]
 name = "cargo-release-pr-test-two"
 version = "2.1.1"
-
-[[package]]
-name = "root-package"
-version = "0.0.1"
