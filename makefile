@@ -5,4 +5,4 @@ release:
 	git tag $(VERSION) 
 	# push the tag
 	git push origin $(VERSION)
-	cargo release publish --no-push --no-tag --execute --verbose --allow-branch "main"
+	cargo release publish --execute --verbose --allow-branch "main"
