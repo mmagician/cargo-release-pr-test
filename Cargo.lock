@@ -4,8 +4,8 @@ version = 3
 
 [[package]]
 name = "cargo-release-pr-test-one"
-version = "2.1.1"
+version = "2.2.2"
 
 [[package]]
 name = "cargo-release-pr-test-two"
-version = "2.1.1"
+version = "2.2.2"
