@@ -6,5 +6,5 @@ description = "Second"
 license = "MIT"
 repository = "https://github.com/mmagician/cargo-release-pr-test"
 
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+cargo-release-pr-test-one = { version = "2.2.0", path = "../one" }
