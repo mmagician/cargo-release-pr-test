@@ -2,6 +2,14 @@ name: Open a release PR
 on:
   workflow_dispatch:
     inputs:
+      crate:
+        description: Crate to release
+        required: true
+        type: choice
+        options:
+          - cargo-release-pr-test-one
+          - cargo-release-pr-test-two
+          - root-package
       version:
         description: Version to release
         required: true
@@ -19,8 +27,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: mmagician/release-pr@release-all-crates
         with:
-          pr-template-file: .github/release-pr-template.ejs
-          pr-release-notes: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           version: ${{ inputs.version }}
-          crate-release-all: true
+          crate-name: ${{ inputs.crate }}
+          #check-semver: true
+          #pr-template-file: .github/release-pr-template.ejs
+          pr-template: "It's a release bro (<%= version.actual %>)"
+          pr-title: "Release <%= crate.name %> <%= version.actual %> (was <%= version.previous %>)"
+          pr-release-notes: true
+          pr-merge-strategy: bors
