@@ -1,5 +1,7 @@
 release:
-	# Run with `make release VERSION=<version>`
+ifndef VERSION
+	$(error VERSION is not set. Run with `make VERSION=<version> release`)
+endif
 	git pull
 	cargo update
 	git tag $(VERSION) 
