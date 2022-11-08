@@ -4,5 +4,5 @@ release:
 	cargo update
 	git tag $(VERSION) 
 	# push the tag
-	git push $(VERSION)
+	git push origin $(VERSION)
 	cargo release publish --no-push --no-tag --execute --verbose --allow-branch "main"
