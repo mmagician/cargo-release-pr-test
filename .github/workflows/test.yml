@@ -36,4 +36,3 @@ jobs:
           pr-title: "Release <%= crate.name %> <%= version.actual %> (was <%= version.previous %>)"
           pr-release-notes: true
           pr-merge-strategy: bors
-          option-dependent-version: fix
