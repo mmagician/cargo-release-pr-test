@@ -27,9 +27,7 @@ Upon merging, this will create the tag `<%= crate.name %>-<%= version.actual %>`
 You will still need to manually publish the cargo crate:
 
 ```
-$ git pull
-$ git switch --detach v{version}
-$ cargo publish
+$ make release
 ```
 
 <% if (pr.releaseNotes) { %>

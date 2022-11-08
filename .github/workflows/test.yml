@@ -19,7 +19,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: mmagician/release-pr@release-all-crates
         with:
+          pr-template-file: .github/release-pr-template.ejs
+          pr-release-notes: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           version: ${{ inputs.version }}
           crate-release-all: true
-          pr-merge-strategy: bors
