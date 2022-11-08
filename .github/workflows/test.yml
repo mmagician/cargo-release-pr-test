@@ -25,7 +25,7 @@ jobs:
           tool: cargo-release
 
       - uses: actions/checkout@v3
-      - uses: mmagician/release-pr@release-all-crates
+      - uses: mmagician/release-pr@custom-dependent-version
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           version: ${{ inputs.version }}
@@ -36,3 +36,4 @@ jobs:
           pr-title: "Release <%= crate.name %> <%= version.actual %> (was <%= version.previous %>)"
           pr-release-notes: true
           pr-merge-strategy: bors
+          option-dependent-version: fix
