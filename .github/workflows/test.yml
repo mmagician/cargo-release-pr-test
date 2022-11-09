@@ -25,7 +25,7 @@ jobs:
           tool: cargo-release
 
       - uses: actions/checkout@v3
-      - uses: mmagician/release-pr@custom-dependent-version
+      - uses: mmagician/release-pr@only-publishable
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           version: ${{ inputs.version }}
